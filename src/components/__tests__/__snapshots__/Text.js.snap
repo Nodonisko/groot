@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with all possible props 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "rgb(255, 0, 0)",
+      "fontSize": 88,
+      "fontWeight": "600",
+      "lineHeight": 49,
+      "paddingLeft": 20,
+      "textAlign": "center",
+    }
+  }
+>
+  Hello world
+</Text>
+`;
+
+exports[`renders correctly with color prop 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "rgb(255, 0, 0)",
+      "fontSize": 17,
+      "fontWeight": "400",
+      "lineHeight": 25,
+      "textAlign": "auto",
+    }
+  }
+>
+  Hello world
+</Text>
+`;
+
+exports[`renders correctly with custom style props 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#ddd",
+      "fontSize": 88,
+      "fontWeight": "400",
+      "lineHeight": 25,
+      "paddingLeft": 20,
+      "textAlign": "auto",
+    }
+  }
+>
+  Hello world
+</Text>
+`;
+
+exports[`renders correctly with font align props 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "rgb(0, 0, 0)",
+      "fontSize": 17,
+      "fontWeight": "400",
+      "lineHeight": 25,
+      "textAlign": "center",
+    }
+  }
+>
+  Hello world
+</Text>
+`;
+
+exports[`renders correctly with font size prop 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "rgb(0, 0, 0)",
+      "fontSize": 28,
+      "fontWeight": "400",
+      "lineHeight": 40,
+      "textAlign": "auto",
+    }
+  }
+>
+  Hello world
+</Text>
+`;
+
+exports[`renders correctly with font size prop and line height prop 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "rgb(0, 0, 0)",
+      "fontSize": 28,
+      "fontWeight": "400",
+      "lineHeight": 49,
+      "textAlign": "auto",
+    }
+  }
+>
+  Hello world
+</Text>
+`;
+
+exports[`renders correctly with font weight props 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "rgb(0, 0, 0)",
+      "fontSize": 17,
+      "fontWeight": "600",
+      "lineHeight": 25,
+      "textAlign": "auto",
+    }
+  }
+>
+  Hello world
+</Text>
+`;
+
+exports[`renders correctly with only required props 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "rgb(0, 0, 0)",
+      "fontSize": 17,
+      "fontWeight": "400",
+      "lineHeight": 25,
+      "textAlign": "auto",
+    }
+  }
+>
+  Hello world
+</Text>
+`;

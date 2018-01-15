@@ -107,7 +107,7 @@ Sometime, especially in React Native development you need to mock whole lib, bec
 
 ### How to write tests
 
-TODO, NOT READY YET ~~Check existing tests for inspiration. For example `./src/components/__tests__/Swiper.js` etc.~~
+Check existing tests for inspiration. For example `./src/components/__tests__/Text.js` etc.
 
 ## Other IDEs and editors (don't needed if you are using Atom)
 

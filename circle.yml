@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/brokertrust/
+    docker:
+      - image: node:8
+    steps:
+      - checkout
+      - restore_cache:
+         key: node_modules_{{ checksum "yarn.lock" }}
+      - run: yarn
+      - save_cache:
+         key: node_modules_{{ checksum "yarn.lock" }}
+         paths:
+           - ~/brokertrust/node_modules/
+      - run:
+         name: ESlint
+         command: yarn run lint
+      - run:
+         name: Test
+         command: yarn run test
+      - run:
+         name: FlowDeps
+         command: apt-get update && apt-get -y install ocaml libelf-dev
+      - run:
+         name: Flow
+         command: yarn run flow
