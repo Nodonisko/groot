@@ -10,16 +10,15 @@ import type {
   FontWeight,
   LineHeight,
 } from '../types'
-import R from 'ramda'
 
 type TextPropsType = {|
   children: string | React.Node,
-  style?: Style,
-  color?: Color,
-  size?: FontSize,
-  weight?: FontWeight,
+  style: ?Style,
+  color: Color,
+  size: FontSize,
+  weight: FontWeight,
   lineHeight?: LineHeight,
-  align?: TextAlign,
+  align: TextAlign,
 |}
 
 const defaultProps = {
@@ -27,24 +26,23 @@ const defaultProps = {
   size: 'body',
   weight: 'regular',
   align: 'auto',
+  style: null,
 }
 
 const styles = {
-  text: ({ color, size, weight, lineHeight, align, style }: TextPropsType) => ({
+  text: ({ color, size, weight, lineHeight, align }: TextPropsType) => ({
     color,
     fontSize: size,
     fontWeight: weight,
     lineHeight: lineHeight || size,
     textAlign: align,
-    extend: {
-      condition: !R.isNil(style),
-      style,
-    },
   }),
 }
 
 const Text = (props: TextPropsType) => (
-  <RNText style={renderRule(styles.text, props)}>{props.children}</RNText>
+  <RNText style={[renderRule(styles.text, props), props.style]}>
+    {props.children}
+  </RNText>
 )
 
 Text.defaultProps = defaultProps

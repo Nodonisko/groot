@@ -109,6 +109,10 @@ Sometime, especially in React Native development you need to mock whole lib, bec
 
 Check existing tests for inspiration. For example `./src/components/__tests__/Text.js` etc.
 
+### How to add new icon to icon fonts
+
+Place SVG of new icon to folder `./assets/fontIcons/source` then go to website (Icomoon)[https://icomoon.io/app/#/select]. Select all files from `source` folder and drag&drop them into page. They should appear as Untitled Set. Select all icons clicking one by one, or click on hambuger menu icon at right side of Untitled Set a click Select all. Then click generate font at bottom of page. Download archive, uzip it and copy file `selection.json` and `fonts/icomoon.tff` into our project folder `assets/fontIcons`. Then run `yarn run link:icons`. Thats all, you are done.
+
 ## Other IDEs and editors (don't needed if you are using Atom)
 
 #### Prettier

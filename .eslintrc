@@ -24,7 +24,6 @@
     "no-nested-ternary": 0, // Nice for JSX.
     "no-param-reassign": 0, // We love param reassignment. Naming is hard.
     "indent": 0, // Prettier ftw.
-    "no-throw-literal": 0,
     "react/forbid-prop-types": 0, // Flow ftw.
     "react/jsx-filename-extension": 0, // No, JSX belongs to .js files.
     "react/jsx-closing-bracket-location": 0, // Prettier ftw.
@@ -34,7 +33,8 @@
     "react/no-unused-prop-types": 0, // Este is going to use Flow types.
     "react/prop-types": 0, // Can not detect flowtype correctly.
     "react/sort-comp": 0,
-    "react/require-default-props": 0, // Checked by flowtype.
+    "react/require-default-props": 0, // Checked by flowtype.,
+    "react/default-props-match-prop-types": 0, // Checked by Flow.
     "flowtype/no-weak-types": [
       2,
       {

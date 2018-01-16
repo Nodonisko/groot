@@ -1,0 +1,31 @@
+<svg width="90" height="90" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Userpic Passive</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-832 1367)">
+<g id="Userpic Passive">
+<g id="Userpic">
+<g id="Mask">
+<use xlink:href="#path0_fill" transform="matrix(1 2.44929e-16 -2.44929e-16 1 832 -1367)" fill="#455FFF"/>
+</g>
+<g id="Userpic">
+<g id="Mask">
+<use xlink:href="#path1_fill" transform="matrix(1 2.44929e-16 -2.44929e-16 1 834 -1365)" fill="#FFFFFF"/>
+</g>
+<mask id="mask0_outline" mask-type="alpha">
+<g id="Mask">
+<use xlink:href="#path1_fill" transform="matrix(1 2.44929e-16 -2.44929e-16 1 834 -1365)" fill="#FFFFFF"/>
+</g>
+</mask>
+<g id="Fill 94" mask="url(#mask0_outline)">
+<use xlink:href="#path2_fill" transform="matrix(1 2.44929e-16 -2.44929e-16 1 838 -1347)" fill="#455FFF"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 45 90C 69.8528 90 90 69.8528 90 45C 90 20.1472 69.8528 0 45 0C 20.1472 0 0 20.1472 0 45C 0 69.8528 20.1472 90 45 90Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 86 43C 86 66.7484 66.7484 86 43 86C 19.2516 86 0 66.7484 0 43C 0 19.2516 19.2516 0 43 0C 66.7484 0 86 19.2516 86 43Z"/>
+<path id="path2_fill" fill-rule="evenodd" d="M 73.5545 55.9987C 66.5887 51.4274 55.9083 53.8547 49.2512 45.7146C 49.2512 45.7146 46.7755 43.1431 52.3463 36.857C 57.919 30.5708 58.384 20.5734 56.9908 12.8573C 55.5977 5.14291 47.7037 0 39.5009 0C 31.2963 0 23.4023 5.14291 22.0109 12.8573C 20.6178 20.5734 21.0809 30.5708 26.6536 36.857C 32.2263 43.1431 29.7487 45.7146 29.7487 45.7146C 23.0935 53.8547 12.4131 51.4274 5.44729 55.9987C -1.51855 60.57 0.183382 71 0.183382 71L 78.8166 71C 78.8166 71 80.5185 60.57 73.5545 55.9987Z"/>
+</defs>
+</svg>

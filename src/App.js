@@ -6,6 +6,8 @@ import React, { Component } from 'react'
 import ComponentShowcase from './components/ComponentShowcase'
 import View from './components/View'
 import renderRule from './theme/renderRule'
+import Icon from './components/Icon'
+import Text from './components/Text'
 
 const styles = {
   container: () => ({
@@ -14,6 +16,10 @@ const styles = {
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   }),
+  text: () => ({
+    color: 'red',
+    paddingTop: 50,
+  }),
 }
 
 export default class App extends Component<{}> {
@@ -21,6 +27,8 @@ export default class App extends Component<{}> {
     return (
       <View style={renderRule(styles.container)}>
         <ComponentShowcase />
+        <Text style={renderRule(styles.text)}>Hello world</Text>
+        <Icon name="backspace" size={50} />
       </View>
     )
   }

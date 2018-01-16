@@ -9,7 +9,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:all": "yarn run lint && yarn run flow && yarn run jest",
-    "prettier": "prettier --config ./.prettierrc  --write \"{App,__{tests,mocks}__,mocks}/**/*.js\""
+    "prettier": "prettier --config ./.prettierrc  --write \"{App,__{tests,mocks}__,mocks}/**/*.js\"",
+    "link:icons": "cp ./assets/fontIcons/icomoon.ttf ./android/app/src/main/assets/fonts/"
   },
   "dependencies": {
     "fela": "^6.1.3",
@@ -19,7 +20,8 @@
     "ramda": "^0.25.0",
     "react": "16.2.0",
     "react-fela": "^6.2.4",
-    "react-native": "0.52.0"
+    "react-native": "0.52.0",
+    "react-native-vector-icons": "^4.5.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

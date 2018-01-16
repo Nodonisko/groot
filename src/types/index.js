@@ -163,3 +163,12 @@ export type Style = {|
 |}
 export type Rule<T> = T => Style
 export type Styles = { [string]: Rule<*> }
+
+export type Icon =
+  | 'arrowLeft'
+  | 'arrowRight'
+  | 'avatar'
+  | 'backspace'
+  | 'eye'
+  | 'refresh'
+  | 'star'

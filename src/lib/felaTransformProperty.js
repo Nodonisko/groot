@@ -10,7 +10,7 @@ function isPlainObject(obj: any): boolean {
 function resolveTransformProperty(
   style: Object,
   properties: Object,
-  renderer: DOMRenderer | NativeRenderer,
+  renderer: NativeRenderer,
 ): Object {
   for (const property in style) {
     const value = style[property]
@@ -28,9 +28,6 @@ function resolveTransformProperty(
 }
 
 export default function transformProperty(properties: Object) {
-  return (
-    style: Object,
-    type: StyleType,
-    renderer: DOMRenderer | NativeRenderer,
-  ) => resolveTransformProperty(style, properties, renderer)
+  return (style: Object, type: StyleType, renderer: NativeRenderer) =>
+    resolveTransformProperty(style, properties, renderer)
 }

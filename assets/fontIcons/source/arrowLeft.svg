@@ -1,0 +1,14 @@
+<svg width="13" height="21" viewBox="0 0 13 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>back icon</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(522 1599)">
+<g id="back icon">
+<g id="Back">
+<use xlink:href="#path0_fill" transform="translate(-522 -1599)" fill="#455FFF"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 13 1.9799L 10.9376 0L 0 10.5L 10.9376 21L 13 19.0201L 4.12482 10.5L 13 1.9799Z"/>
+</defs>
+</svg>
