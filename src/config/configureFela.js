@@ -3,7 +3,6 @@ import { createRenderer } from 'fela-native'
 import extend from 'fela-plugin-extend'
 import transformProperty from '../lib/felaTransformProperty'
 import type { NativeRenderer } from 'fela'
-import logger from 'fela-logger'
 import theme from '../theme/defaultTheme'
 
 const customPropertyPlugin = transformProperty({
@@ -15,7 +14,6 @@ const customPropertyPlugin = transformProperty({
 
 const renderer: NativeRenderer = createRenderer({
   plugins: [extend(), customPropertyPlugin],
-  enhancers: [logger()],
 })
 
 export default renderer

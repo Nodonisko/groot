@@ -1405,10 +1405,6 @@ css-in-js-utils@2.0.0, css-in-js-utils@^2.0.0:
   dependencies:
     hyphenate-style-name "^1.0.2"
 
-cssbeautify@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/cssbeautify/-/cssbeautify-0.3.1.tgz#12dd1f734035c2e6faca67dcbdcef74e42811397"
-
 cssom@0.3.x, "cssom@>= 0.3.2 < 0.4.0":
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/cssom/-/cssom-0.3.2.tgz#b8036170c79f07a90ff2f16e22284027a243848b"
@@ -1980,13 +1976,6 @@ fela-dom@^7.0.4:
   dependencies:
     css-in-js-utils "^2.0.0"
     fast-loops "^1.0.0"
-    fela-utils "^8.0.3"
-
-fela-logger@^5.0.17:
-  version "5.0.17"
-  resolved "https://registry.yarnpkg.com/fela-logger/-/fela-logger-5.0.17.tgz#f1a9f23d5863dcbe913ec07a64b6c5aec5eb1bb6"
-  dependencies:
-    cssbeautify "^0.3.1"
     fela-utils "^8.0.3"
 
 fela-native@^5.0.17:
