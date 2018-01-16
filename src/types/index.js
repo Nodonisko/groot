@@ -126,7 +126,7 @@ export type Style = {|
   top?: number,
   width?: number,
   zIndex?: number,
-  transform?: any[],
+  transform?: any[], // eslint-disable-line
   transformMatrix?: Array<number>,
   rotation?: number,
   scaleX?: number,

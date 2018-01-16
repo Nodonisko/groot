@@ -10,7 +10,10 @@
     "test:watch": "jest --watch",
     "test:all": "yarn run lint && yarn run flow && yarn run jest",
     "prettier": "prettier --config ./.prettierrc  --write \"{App,__{tests,mocks}__,mocks}/**/*.js\"",
-    "link:icons": "cp ./assets/fontIcons/icomoon.ttf ./android/app/src/main/assets/fonts/"
+    "link:icons": "cp ./assets/fontIcons/icomoon.ttf ./android/app/src/main/assets/fonts/",
+    "link:fonts": "cp ./assets/fonts/* ./android/app/src/main/assets/fonts/",
+    "android:build": "cd android && ./gradlew assembleRelease --info",
+    "android:clean": "cd android && ./gradlew clean"
   },
   "dependencies": {
     "fela": "^6.1.3",

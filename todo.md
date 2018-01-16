@@ -7,9 +7,7 @@
 * Codepush
 * Enzyme?
 * Bitrise
-* Custom font
 * RN fast image
-* Vector icons
 * Translations
 * GraphQL + Relay
 * Avoiding keyboard view
@@ -21,3 +19,5 @@
 # DONE
 
 * CircleCI + Branch permissions
+* Vector icons
+* Custom font
