@@ -1,4 +1,5 @@
 // @flow
+import AnimatedNode from 'AnimatedNode'
 
 export type TextAlign = 'auto' | 'left' | 'right' | 'center'
 // Not sure if all these styles all supported in RN, feel free to remove some
@@ -56,106 +57,153 @@ export type Theme = {|
   lineHeights: LineHeights,
 |}
 
+export type Dimension = null | number | string | AnimatedNode
+
 export type Style = {|
-  backfaceVisibility?: 'visible' | 'hidden',
-  backgroundColor?: string,
-  borderBottomColor?: string,
-  borderBottomLeftRadius?: number,
-  borderBottomRightRadius?: number,
-  borderBottomWidth?: number,
-  borderColor?: string,
-  borderLeftColor?: string,
-  borderRadius?: number,
-  borderRightColor?: string,
-  borderRightWidth?: number,
-  borderStyle?: 'solid' | 'dotted' | 'dashed',
-  borderTopColor?: string,
-  borderTopLeftRadius?: number,
-  borderTopRightRadius?: number,
+  display?: 'none' | 'flex',
+  width?: Dimension,
+  height?: Dimension,
+  top?: Dimension,
+  bottom?: Dimension,
+  left?: Dimension,
+  right?: Dimension,
+  minWidth?: Dimension,
+  maxWidth?: Dimension,
+  minHeight?: Dimension,
+  maxHeight?: Dimension,
+  margin?: Dimension,
+  marginVertical?: Dimension,
+  marginHorizontal?: Dimension,
+  marginTop?: Dimension,
+  marginBottom?: Dimension,
+  marginLeft?: Dimension,
+  marginRight?: Dimension,
+  padding?: Dimension,
+  paddingVertical?: Dimension,
+  paddingHorizontal?: Dimension,
+  paddingTop?: Dimension,
+  paddingBottom?: Dimension,
+  paddingLeft?: Dimension,
+  paddingRight?: Dimension,
+  borderWidth?: number,
   borderTopWidth?: number,
-  opacity?: number,
-  overflow?: 'visible' | 'hidden',
-  shadowColor?: string,
-  shadowOffset?: { width: number, height: number },
-  shadowOpacity?: number,
-  shadowRadius?: number,
-  elevation?: number,
-  alignItems?: 'flex-start' | 'flex-end' | 'center' | 'stretch',
-  alignSelf?: 'auto' | 'flex-start' | 'flex-end' | 'center' | 'stretch',
   borderBottomWidth?: number,
   borderLeftWidth?: number,
   borderRightWidth?: number,
-  borderTopWidth?: number,
-  borderWidth?: number,
-  bottom?: number,
-  flex?: number,
-  flexGrow?: number,
-  flexShrink?: number,
-  flexBasis?: number,
-  flexDirection?: 'row' | 'column' | 'row-reverse' | 'column-reverse',
+  position?: 'absolute' | 'relative',
+  flexDirection?: 'row' | 'row-reverse' | 'column' | 'column-reverse',
   flexWrap?: 'wrap' | 'nowrap',
-  height?: number,
   justifyContent?:
     | 'flex-start'
     | 'flex-end'
     | 'center'
     | 'space-between'
     | 'space-around',
-  left?: number,
-  minWidth?: number,
-  maxWidth?: number,
-  minHeight?: number,
-  maxHeight?: number,
-  margin?: number,
-  marginBottom?: number,
-  marginHorizontal?: number,
-  marginLeft?: number,
-  marginRight?: number,
-  marginTop?: number,
-  marginVertical?: number,
+  alignItems?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline',
+  alignSelf?:
+    | 'auto'
+    | 'flex-start'
+    | 'flex-end'
+    | 'center'
+    | 'stretch'
+    | 'baseline',
+  alignContent?:
+    | 'flex-start'
+    | 'flex-end'
+    | 'center'
+    | 'stretch'
+    | 'space-between'
+    | 'space-around',
   overflow?: 'visible' | 'hidden' | 'scroll',
-  padding?: number,
-  paddingBottom?: number,
-  paddingHorizontal?: number,
-  paddingLeft?: number,
-  paddingRight?: number,
-  paddingTop?: number,
-  paddingVertical?: number,
-  position?: 'absolute' | 'relative',
-  right?: number,
-  top?: number,
-  width?: number,
+  flex?: number,
+  flexGrow?: number,
+  flexShrink?: number,
+  flexBasis?: number | string,
+  aspectRatio?: number,
   zIndex?: number,
-  transform?: any[], // eslint-disable-line
-  transformMatrix?: Array<number>,
-  rotation?: number,
-  scaleX?: number,
-  scaleY?: number,
-  translateX?: number,
-  translateY?: number,
-  color?: string | Color,
+  direction?: 'inherit' | 'ltr' | 'rtl',
+  transform?: $ReadOnlyArray<
+    | { perspective: number | AnimatedNode }
+    | { rotate: string }
+    | { rotateX: string }
+    | { rotateY: string }
+    | { rotateZ: string }
+    | { scale: number | AnimatedNode }
+    | { scaleX: number | AnimatedNode }
+    | { scaleY: number | AnimatedNode }
+    | { translateX: number | AnimatedNode }
+    | { translateY: number | AnimatedNode }
+    | {
+        translate:
+          | [number | AnimatedNode, number | AnimatedNode]
+          | AnimatedNode,
+      }
+    | { skewX: string }
+    | { skewY: string }
+    // TODO: what is the actual type it expects?
+    | { matrix: $ReadOnlyArray<number | AnimatedNode> | AnimatedNode },
+  >,
+  shadowColor?: string,
+  shadowOffset?: {
+    width?: number,
+    height?: number,
+  },
+  shadowOpacity?: number | AnimatedNode,
+  shadowRadius?: number,
+  backfaceVisibility?: 'visible' | 'hidden',
+  backgroundColor?: Color,
+  borderColor?: Color,
+  borderTopColor?: Color,
+  borderRightColor?: Color,
+  borderBottomColor?: Color,
+  borderLeftColor?: Color,
+  borderRadius?: number,
+  borderTopLeftRadius?: number,
+  borderTopRightRadius?: number,
+  borderBottomLeftRadius?: number,
+  borderBottomRightRadius?: number,
+  borderStyle?: 'solid' | 'dotted' | 'dashed',
+  borderWidth?: number,
+  borderTopWidth?: number,
+  borderRightWidth?: number,
+  borderBottomWidth?: number,
+  borderLeftWidth?: number,
+  opacity?: number | AnimatedNode,
+  elevation?: number,
+  color?: Color,
   fontFamily?: string,
-  fontSize?: number | FontSize,
+  fontSize?: FontSize,
   fontStyle?: 'normal' | 'italic',
-  fontWeight?: FontWeightStyle | FontWeight,
+  fontWeight?: FontWeight,
+  fontVariant?: $ReadOnlyArray<
+    | 'small-caps'
+    | 'oldstyle-nums'
+    | 'lining-nums'
+    | 'tabular-nums'
+    | 'proportional-nums',
+  >,
+  textShadowOffset?: { width?: number, height?: number },
+  textShadowRadius?: number,
+  textShadowColor?: Color,
   letterSpacing?: number,
-  lineHeight?: number | LineHeight,
-  textAlign?: TextAlign,
+  lineHeight?: LineHeight,
+  textAlign?: 'auto' | 'left' | 'right' | 'center' | 'justify',
+  textAlignVertical?: 'auto' | 'top' | 'bottom' | 'center',
+  includeFontPadding?: boolean,
   textDecorationLine?:
     | 'none'
     | 'underline'
     | 'line-through'
     | 'underline line-through',
   textDecorationStyle?: 'solid' | 'double' | 'dotted' | 'dashed',
-  textDecorationColor?: string,
-  textShadowColor?: string,
-  textShadowOffset?: { width: number, height: number },
-  textShadowRadius?: number,
-  letterSpacing?: number,
-  textDecorationColor?: string,
-  textDecorationStyle?: 'solid' | 'double' | 'dotted' | 'dashed',
+  textDecorationColor?: Color,
   writingDirection?: 'auto' | 'ltr' | 'rtl',
-  textAlignVertical?: 'auto' | 'top' | 'bottom' | 'center',
+  resizeMode?: 'contain' | 'cover' | 'stretch' | 'center' | 'repeat',
+  tintColor?: Color,
+  overlayColor?: string,
+  resizeMode?: 'contain' | 'cover' | 'stretch' | 'center' | 'repeat',
+  tintColor?: Color,
+  overlayColor?: string,
   extend?: {|
     condition: boolean,
     style: ?Style,

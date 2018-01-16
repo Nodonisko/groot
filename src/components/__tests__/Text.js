@@ -2,6 +2,7 @@
 import 'react-native'
 import React from 'react'
 import Text from '../Text'
+import renderRule from '../../theme/renderRule'
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer'
@@ -47,14 +48,14 @@ it('renders correctly with font align props', () => {
 })
 
 it('renders correctly with custom style props', () => {
-  const style = { fontSize: 88, paddingLeft: 20, color: '#ddd' }
-  const component = <Text style={style}>Hello world</Text>
+  const style = () => ({ fontSize: 'title1', paddingLeft: 20, color: 'red' })
+  const component = <Text style={renderRule(style)}>Hello world</Text>
   const tree = renderer.create(component).toJSON()
   expect(tree).toMatchSnapshot()
 })
 
 it('renders correctly with all possible props', () => {
-  const style = { fontSize: 88, paddingLeft: 20 }
+  const style = () => ({ fontSize: 'title2', paddingLeft: 20 })
   const component = (
     <Text
       color="red"
@@ -62,7 +63,7 @@ it('renders correctly with all possible props', () => {
       lineHeight="largeTitle"
       weight="bold"
       align="center"
-      style={style}
+      style={renderRule(style)}
     >
       Hello world
     </Text>

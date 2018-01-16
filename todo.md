@@ -14,10 +14,10 @@
 * Navigation
 * Forms? Formik?
 * Safe area view
-* Set up Bitbucket branch permissions
 
 # DONE
 
 * CircleCI + Branch permissions
 * Vector icons
 * Custom font
+* Set up Bitbucket branch permissions

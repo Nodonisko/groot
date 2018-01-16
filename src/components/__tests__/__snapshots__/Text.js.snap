@@ -15,7 +15,7 @@ exports[`renders correctly with all possible props 1`] = `
         "textAlign": "center",
       },
       Object {
-        "fontSize": 88,
+        "fontSize": 22,
         "paddingLeft": 20,
       },
     ]
@@ -62,8 +62,8 @@ exports[`renders correctly with custom style props 1`] = `
         "textAlign": "auto",
       },
       Object {
-        "color": "#ddd",
-        "fontSize": 88,
+        "color": "rgb(255, 0, 0)",
+        "fontSize": 28,
         "paddingLeft": 20,
       },
     ]
