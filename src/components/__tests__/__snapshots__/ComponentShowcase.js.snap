@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with only required props 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "rgb(255, 0, 0)",
+        "fontSize": 22,
+        "fontWeight": "600",
+        "lineHeight": 32,
+        "textAlign": "center",
+      }
+    }
+  >
+    Hello world
+  </Text>
+</View>
+`;
