@@ -1,4 +1,5 @@
 // @flow
+// eslint-disable-next-line
 import AnimatedNode from 'AnimatedNode'
 
 export type TextAlign = 'auto' | 'left' | 'right' | 'center'

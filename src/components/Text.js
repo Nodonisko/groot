@@ -10,11 +10,6 @@ import type {
   FontWeight,
   LineHeight,
 } from '../types'
-import type { StyleObj } from 'react-native/Libraries/StyleSheet/StyleSheetTypes.js'
-
-const neco: StyleObj = {
-  backgroundColor: 'aaa',
-}
 
 type TextPropsType = {|
   children: string | React.Node,
