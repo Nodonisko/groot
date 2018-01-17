@@ -221,3 +221,18 @@ export type Icon =
   | 'eye'
   | 'refresh'
   | 'star'
+
+// Redux models
+// sadly we can use exact type for States because or flow bug
+// https://github.com/facebook/flow/issues/2405
+export type AppState = {
+  foo: boolean,
+  foo2: number,
+}
+export type AppAction = { type: 'SET_FOO', payload: { foo: boolean } }
+
+export type State = {|
+  app: AppState,
+|}
+
+export type Action = AppAction

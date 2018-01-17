@@ -1,7 +1,8 @@
 # TODO
 
 * Wix detox
-* Redux, Reselect, Redux observable
+* Redux, Reselect
+* Redux observable?
 * ENV variables
 * Sentry
 * Codepush

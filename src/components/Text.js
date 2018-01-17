@@ -36,6 +36,7 @@ const styles = {
     fontWeight: weight,
     lineHeight: lineHeight || size,
     textAlign: align,
+    textAlignVertical: 'center',
   }),
 }
 

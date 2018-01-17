@@ -7,13 +7,19 @@ import { Provider as FelaProvider, ThemeProvider } from 'react-fela'
 import App from './App'
 import renderer from './config/configureFela'
 import defaultTheme from './theme/defaultTheme'
+import { Provider as Redux } from 'react-redux'
+import configureStore from './config/configureStore'
+
+const store = configureStore()
 
 class Root extends React.Component<*> {
   render() {
     return (
       <FelaProvider renderer={renderer}>
         <ThemeProvider theme={defaultTheme}>
-          <App />
+          <Redux store={store}>
+            <App />
+          </Redux>
         </ThemeProvider>
       </FelaProvider>
     )
